@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap')
+    
+*,
+*::before,
+*::after 
+  box-sizing: border-box
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd 
+  margin: 0
+
+
+ul[role='list'],
+ol[role='list'] 
+  list-style: none
+
+
+html:focus-within 
+  scroll-behavior: smooth
+
+
+body 
+  min-height: 100vh
+  text-rendering: optimizeSpeed
+  line-height: 1.5
+
+
+a:not([class]) 
+  text-decoration-skip-ink: auto
+
+
+img,
+picture 
+  max-width: 100%
+  display: block
+
+
+input,
+button,
+textarea,
+select 
+  font: inherit
+
+
+@media (prefers-reduced-motion: reduce) 
+  html:focus-within 
+   scroll-behavior: auto
+  
+  
+  *,
+  *::before,
+  *::after 
+    animation-duration: 0.01ms !important
+    animation-iteration-count: 1 !important
+    transition-duration: 0.01ms !important
+    scroll-behavior: auto !important
+
+$clr-soft-blue: hsl(215, 51%, 70%)
+$clr-cyan: hsl(178, 100%, 50%)
+
+/* Main BG */ 
+$clr-very-dark-blue1: hsl(217, 54%, 11%)
+/* Card BG */ 
+$clr-very-dark-blue2: hsl(216, 50%, 16%)
+/* Line */ 
+$clr-very-dark-blue3: hsl(215, 32%, 27%)
+
+$clr-white: hsl(0, 0%, 100%)
+
+$fs-18: 18px
+
+$fw-300: 300px
+$fw-400: 400px
+$fw-600: 600px
+
+/*---------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------*/
+
+
+body
+  font-family: 'Outfit', sans-serif
+  background-color: $clr-very-dark-blue1
+  display: flex
+  justify-content: center
+  align-items: center 
+
+.card
+  position: relative
+  background-color: $clr-very-dark-blue2
+  height: auto
+  width: 340px
+  padding: 20px
+  border-radius: 20px 
+
+  .card__image
+    border-radius: 10px 
+
+  .image__hidden
+    width: 300px
+    height: 300px
+    cursor: pointer
+    transition: 0.2s
+    background-color: $clr-cyan
+    border-radius: 10px 
+    position: absolute
+    top: 20px
+    left: 20px
+    opacity: 0
+    z-index: 5
+
+  .image__hidden:hover
+    opacity: 40%
+  
+  .card__content
+    padding-top: 20px
+    padding-bottom: 10px
+
+    .card__name
+      color: $clr-white
+      font-weight: $fw-600
+      font-size: 22px
+      letter-spacing: 1.2
+      margin-bottom: 10px
+      cursor: pointer
+      transition: 0.2s
+
+    .card__name:hover
+      color: $clr-cyan
+    
+    .card__desc
+      color: $clr-soft-blue
+      margin-bottom: 20px
+      font-weight: $fw-300
+
+    .card__idk
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      padding-bottom: 20px
+
+      .card__price
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+
+        .price__img
+          padding-right: 7px
+
+        .price
+          color: $clr-cyan
+          font-weight: $fw-400
+
+      .card__time
+        margin-left: auto 
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+
+
+        .time
+          margin-left: 6px
+          color: $clr-soft-blue
+          font-weight: $fw-400
+
+    .spacer
+      border-top: 2px solid $clr-very-dark-blue3
+      padding-bottom: 10px
+
+    .card__author
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+
+      .author
+        color: $clr-soft-blue
+        font-weight: $fw-300
+        padding-right: 3px
+        padding-left: 7px 
+
+      .author__link
+        color: $clr-white
+        font-weight: $fw-400
+        cursor: pointer
+        transition: 0.2s
+
+      .author__link:hover
+        color: $clr-cyan

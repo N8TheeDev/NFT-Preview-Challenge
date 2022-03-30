@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Main BG */
+/* Card BG */
+/* Line */
+/*---------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------*/
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: #0d192b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card {
+  position: relative;
+  background-color: #14253d;
+  height: auto;
+  width: 340px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.card .card__image {
+  border-radius: 10px;
+}
+
+.card .image__hidden {
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  background-color: #00fff7;
+  border-radius: 10px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  opacity: 0;
+  z-index: 5;
+}
+
+.card .image__hidden:hover {
+  opacity: 40%;
+}
+
+.card .card__content {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.card .card__content .card__name {
+  color: white;
+  font-weight: 600px;
+  font-size: 22px;
+  letter-spacing: 1.2;
+  margin-bottom: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.card .card__content .card__name:hover {
+  color: #00fff7;
+}
+
+.card .card__content .card__desc {
+  color: #8bacda;
+  margin-bottom: 20px;
+  font-weight: 300px;
+}
+
+.card .card__content .card__idk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 20px;
+}
+
+.card .card__content .card__idk .card__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .card__content .card__idk .card__price .price__img {
+  padding-right: 7px;
+}
+
+.card .card__content .card__idk .card__price .price {
+  color: #00fff7;
+  font-weight: 400px;
+}
+
+.card .card__content .card__idk .card__time {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .card__content .card__idk .card__time .time {
+  margin-left: 6px;
+  color: #8bacda;
+  font-weight: 400px;
+}
+
+.card .card__content .spacer {
+  border-top: 2px solid #2f415b;
+  padding-bottom: 10px;
+}
+
+.card .card__content .card__author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .card__content .card__author .author {
+  color: #8bacda;
+  font-weight: 300px;
+  padding-right: 3px;
+  padding-left: 7px;
+}
+
+.card .card__content .card__author .author__link {
+  color: white;
+  font-weight: 400px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.card .card__content .card__author .author__link:hover {
+  color: #00fff7;
+}
+/*# sourceMappingURL=styles.css.map */
